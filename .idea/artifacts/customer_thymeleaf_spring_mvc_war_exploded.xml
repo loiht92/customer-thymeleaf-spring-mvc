@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="customer-thymeleaf-spring-mvc:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/customer_thymeleaf_spring_mvc_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="customer-thymeleaf-spring-mvc/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="customer-thymeleaf-spring-mvc" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:Release" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:Release" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:Release1" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:Release1" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:Release2" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:Release2" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:Release3" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:Release3" />
+          <element id="library" level="project" name="Gradle: javax.servlet:javax.servlet-api:3.0.1" />
+        </element>
+      </element>
+      <element id="artifact" artifact-name="Gradle : org.example : customer-thymeleaf-spring-mvc-1.0-SNAPSHOT.war (exploded)" />
+    </root>
+  </artifact>
+</component>
