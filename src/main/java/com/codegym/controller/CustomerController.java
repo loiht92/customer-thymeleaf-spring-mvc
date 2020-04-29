@@ -14,7 +14,7 @@ import java.util.List;
 public class CustomerController {
     private CustomerService customerService = new CustomerServiceImpl();
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public String getIndex(Model model){
         List<Customer> customerList = customerService.findAll();
         model.addAttribute("customers", customerList);
@@ -22,17 +22,26 @@ public class CustomerController {
     }
 
     @GetMapping("/customer/create")
-    public String create(Model model){
+    public String create(Model model) {
         model.addAttribute("customer", new Customer());
         return "create";
     }
 
+//    @PostMapping("/customer/create")
+//    public String create(@ModelAttribute Customer customer, RedirectAttributes redirect) {
+//
+//        customerService.save(customer);
+//        redirect.addAttribute("customer", customer);
+//        redirect.addFlashAttribute("success", "Saved customer successfully!");
+//        return "redirect:/index";
+//    }
+
     @PostMapping("/customer/save")
-    public String save(Customer customer, RedirectAttributes redirect){
+    public String save( Customer customer, RedirectAttributes redirect) {
         customer.setId((int)(Math.random() * 10000));
         customerService.save(customer);
-        redirect.addFlashAttribute("success","saved customer successfully !");
-        return "redirect:/index";
+        redirect.addFlashAttribute("success", "Saved customer successfully!");
+        return "redirect:/";
     }
 
     @GetMapping("/customer/{id}/edit")
@@ -45,7 +54,7 @@ public class CustomerController {
     public String update(Customer customer, RedirectAttributes redirect) {
         customerService.update(customer.getId(), customer);
         redirect.addFlashAttribute("success", "Modified customer successfully!");
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @GetMapping("/customer/{id}/delete")
@@ -58,7 +67,7 @@ public class CustomerController {
     public String delete(Customer customer, RedirectAttributes redirect) {
         customerService.delete(customer.getId());
         redirect.addFlashAttribute("success", "Removed customer successfully!");
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @GetMapping("/customer/{id}/view")

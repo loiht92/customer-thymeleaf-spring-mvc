@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface CustomerService {
 
-    List<Customer> findAll(); //Lay ra danh sach khach hang
+    List<Customer> findAll();
 
-    Customer findById(int id); //Tim khach hang theo id
+    Customer findById(int id);
 
-    void save(Customer customer); //Them moi khach hang
+    void save(Customer customer);
 
-    void update( int id, Customer customer); //Cap nhat danh sach theo id
+    void update( int id, Customer customer);
 
-    void delete(int id); //Xoa khach hang theo id
+    void delete(int id);
 }
